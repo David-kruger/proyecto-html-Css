@@ -1,0 +1,533 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Resetear los valores de entrada */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #F9F9F9;
+    color: #141414;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* resetear los valores de los elementos  */
+body, div, ul, nav, header, footer, a, li, label,h2,h6,h5,p {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------------div Infobar -------------------*/
+.header__infobar{
+    background-color: #141414;
+    color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1.4em;
+    container-type: inline-size;
+    container-name: infobar;
+}
+
+.infobar-text {
+    display: flex;
+    justify-content: center;
+}
+
+.text-item {
+    position: absolute;
+    z-index: 10;
+    animation: roll 8s ease 1s infinite;
+    letter-spacing: 1px;  
+}
+
+.text-item:nth-child(1) {
+    animation-delay: 0s;
+    opacity: 0;
+}
+
+.text-item:nth-child(2) {
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+/* Animacion */
+@keyframes roll {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-70%,0);
+    }
+    2.5%, 50% {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+    52.5%, 100% {
+        opacity: 0;
+        transform: translate3d(0,70%,0);
+    }
+}
+
+/* ---------------Query infobar -------------------*/
+@container infobar (max-width:400px) {
+    .text-item {
+        font-size: 12px;
+    }
+}
+/* ---------------FIN div Infobar -------------------*/
+
+/* ------------------- header -----------------------*/
+.header {
+    background-color: #fff;
+    container-type: inline-size;
+    container-name: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 21;
+}
+
+/* header boton de menu */
+.open__nav-button {
+    color: #141414;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    left: 10px;
+}
+
+.header__checkbox {
+    display: none;
+}
+
+.header__checkbox:checked ~ .header__nav-menu {
+    display: flex;
+}
+
+/* header menu navegacion */
+.header__nav-menu {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.header__nav-item {
+    list-style: none;
+}
+
+.header__nav-item a {
+    text-decoration: none;
+    color: #141414;
+}
+
+.header__nav-item a:is(:hover,:active) {
+    text-decoration: underline;
+}
+
+/* img logo */
+.header__logo-container {
+    margin: auto;
+}
+
+.header__logo {
+    max-width: 100%;
+}
+
+/* header menu sesion */
+.header__nav-sesion {
+    position: absolute;
+    right: 0;
+}
+
+.header__nav-sesion a:first-child {
+    display: none;
+}
+
+.header__nav-sesion a:visited {
+    color: inherit;
+}
+
+.header__nav-sesion a:last-child {
+    position: relative; /* Necesario para posicionar el texto */
+    right: 10px;
+}
+
+.header__nav-sesion a:last-child::before {
+    content: ""; /* Creamos un pseudo-elemento antes del texto */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent; /* Hacemos el fondo transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centramos el icono dentro del pseudo-elemento */
+  }
+  
+  .header__nav-sesion a:last-child span {
+    display: none; /* Ocultamos el texto */
+  }
+
+/* ------------- header queries --------------------*/
+
+@container header (min-width:600px) {
+
+    .header__logo-container{
+        margin: 0 0 0 10px;
+    }
+
+    .header__nav-menu {
+        display: block;
+        position: static;
+        height: auto;
+        width: auto;
+        justify-content: space-between;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        gap: 20px;
+    }
+
+    .header__nav-item a {
+        padding-bottom: 9px;
+    }
+
+    .header__nav-item a:is(:hover,:active) {
+        text-decoration: none;
+        border-bottom: 2px solid #141414;
+    }
+
+    .open__nav-button {
+        display: none;
+    }
+
+    .header__nav-sesion {
+        position: static;
+    }
+
+}
+
+@container header (min-width:800px) {
+
+    .header__nav-sesion {
+        display: flex;
+        gap: 15px;
+    }
+
+    .header__nav-sesion a {
+        text-decoration: none;
+        padding: 6px 9px;
+        color: #817f82;
+    }
+
+    .header__nav-sesion a:first-child {
+        display: block;
+        /*  */
+        border: 1px solid transparent;
+        border-radius: 40px;
+    }
+
+    .header__nav-sesion a:first-child:hover {
+        background-color: #817F82;
+        color: #F9F9F9;
+    }
+
+    .header__nav-sesion a:last-child::before {
+        display: none;
+    }
+
+    .header__nav-sesion a:last-child {
+        position: static;
+        margin-right: 10px;
+        /*  */
+        border: 1px solid #141414;
+        border-radius: 40px;
+    }
+
+    .header__nav-sesion a:last-child span {
+        display: inline-block;
+    }
+
+    .header__nav-sesion a:last-child:hover {
+        background-color: #141414;
+        color: #F9F9F9;
+    }
+}    
+/* ----------------- FIN Header ---------------------*/
+
+/* ----------------- Footer ---------------------*/
+.footer__container {
+    display: flex;
+    justify-content: center ;
+    /* background-image: linear-gradient(to bottom, #f9f9f9, #817f82);   */
+    background-image: url(/Img/fondo_sign_up.jpg);
+    container-type: inline-size;
+    container-name: footer;
+    margin-top: auto;
+
+}
+
+.footer__wrapper {
+    width: 95%;
+    max-width: 1440px;
+    margin: 5px;
+    background-color: #F9F9F9;
+    box-shadow: 0 0 5px #0006;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__social-list, .footer__menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    /* grid-template-rows: 1fr 1fr; */
+    gap: 5px;
+    place-content: center;
+    margin: 5px 0 ;
+}
+
+.social-item-menu:nth-child(5) {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.social-item-social, .social-item-menu {
+    list-style: none;
+    color: #141414;
+}
+
+
+.social-item-menu a {
+    text-decoration: none;
+}
+
+.social-item-social a:visited, .social-item-menu a:visited {
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
+.social-item-menu a:is(:hover,:active) {
+    border-bottom: 2px solid #141414;
+}
+
+.footer__wrapper p {
+    font-size: 0.9em;
+}
+
+/* ----------------- Footer queries ---------------------*/
+@container footer (min-width:600px) {
+
+    .footer__social-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .social-item-menu:nth-child(5) {
+        grid-column: span 1;
+        text-align: center;
+    }
+
+    .footer__menu-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+
+    }
+}
+/* ----------------- Footer Ends ---------------------*/
+
+
+/* ----------------- Main category -------------------*/
+
+.main {
+    container-type: inline-size;
+    container-name: category;
+    position: relative;
+    z-index: 20;
+    /*  */
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ---- main wrapper ---- */
+
+.main__wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "aside " 
+    "main";
+    gap: 20px;
+}
+
+/* ---- main div main --- */
+.main_main {
+    grid-area: main;
+    width: 95%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+/* ---- aside category ---- */
+.category {
+
+    grid-area: aside;
+
+    /*  */
+    background-color: #F9F9F9;
+    display: flex;
+    flex-direction: column;
+
+    /*  */
+    height: auto;
+    padding-top: 11px; 
+    position: relative;
+    z-index: 20;
+}
+
+.open__category-button {
+    position: absolute;
+    left: 10px;
+}
+
+.category-checkbox {
+    display: none;
+}
+
+.catetgory__nav {
+    display: none;
+    background-color: #Fff;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: -1;
+    overflow-y: scroll;
+}
+
+.category-checkbox:checked ~ .catetgory__nav {
+    display: flex;
+    transition: all 0.5s;
+}
+
+.catetgory__nav-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 24px;
+    padding-top: 5px;
+    align-items: start;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #141414;
+}
+
+.catetgory__nav-form span {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+/* ---------------------------------------- */
+
+/* ---- main div category  ---- */
+.main__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.main_item-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #141414;
+}
+
+.main_item-link:hover {
+    outline: 1px solid #141414;
+    opacity: 0.65;
+}
+
+.main_item-link:visited {
+    color: inherit;
+}
+
+.main_item-link img {
+    width: 100%;
+    background-size: cover; 
+    box-shadow: 0 0 5px #0006;
+}
+
+.main_item-link h6:nth-last-of-type(3) {
+    font-size: 13px;
+}
+
+.main_item-link h6:nth-last-of-type(2) {
+    font-size: 13px;
+    color: #817F82;
+}
+
+.main_item-link h6:nth-last-of-type(1) {
+    font-size: 13px;
+    font-weight: 700;
+}
+/* ---- main div category  end ---- */
+
+/* ---- aside category queries ---- */
+@container category (min-width: 600px) {
+    .catetgory__nav {
+        display: block;
+        position: sticky;
+        height: auto;
+        width: 100%;
+        background-color: #F9F9F9;
+    }
+
+    .catetgory__nav-form {
+        width: 100%;
+    }
+
+    .open__category-button {
+        display: none;
+    }
+
+    .catetgory__nav-wrapper div {
+        display: none;
+    }
+
+    /*  */
+    .main__wrapper {
+        grid-template-rows: auto;
+        grid-template-columns: minmax(150px,230px) 3fr;
+        grid-template-areas: "aside main";
+    }
+
+    /*  */
+    .main__grid {
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+
+}
+/* ---- aside category end ---- */
+

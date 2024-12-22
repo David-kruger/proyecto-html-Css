@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/lonuevo.css">
+    <link rel="shortcut icon" href="/Img/icon_run96.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee172cc989.js" crossorigin="anonymous"></script>
+    <title>Sudor y Gloria</title>
+</head>
+<body>
+    
+    <section class="header__infobar">
+        <div class="infobar-text">
+            <div class="text-item">
+                <i class="fa-solid fa-fire" style="color: #FFD43B;"></i> HASTA 6 MESES SIN INTERESES <i class="fa-solid fa-fire" style="color: #FFD43B;"></i>
+            </div>
+            <div class="text-item">
+                HASTA 60% OFF  <i class="fa-regular fa-credit-card" style="color: #ab0741;"></i>
+            </div>
+        </div>
+    </section>
+
+    <header class="header">
+           
+        <!-- Boton menu hamburguesa -->
+        <input type="checkbox" class="header__checkbox" name="checkbox" id="open_menu">
+        <label for="open_menu" class="open__nav-button" role="button">=</label>
+
+        <!-- Div contenedor Logo -->
+        <div class="header__logo-container">
+            <a href="index.html" class="navbar-logo" ><img src="/Img/logo.png" alt="sudor y gloria logo" class="header_logo"></a>
+        </div>
+
+        <!-- Menu Navegacion -->
+        <nav class="header__nav-menu">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="lonuevo.html">Lo Nuevo</a></li>
+                <li class="header__nav-item"><a href="mujer.html">Mujer</a></li>
+                <li class="header__nav-item"><a href="hombre.html">Hombre</a></li>
+                <li class="header__nav-item"><a href="nino.html">Niño/a</a></li>
+                <li class="header__nav-item"><a href="eventos.html">Eventos</a></li>
+                <li class="header__nav-item"><a href="contact.html" target="_blank">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <nav class="header__nav-sesion">
+            <a href="signup.html" target="_blank" >Registarse</a>
+            <a href="login.html" target="_blank"><i class="fa-solid fa-user-plus fa-lg" ></i> <span>Iniciar sesion</span></a>
+         </nav>
+
+    </header>
+
+    <main class="main">
+
+        <div class="main__wrapper">
+
+            <aside class="category">
+                <input type="checkbox" id="open-category" class="category-checkbox">
+                <label for="open-category" class="open__category-button" role="button"><i class="fa-solid fa-arrow-down-wide-short fa-lg"></i></label>
+                <nav class="catetgory__nav">
+
+                    <div class="catetgory__nav-wrapper">
+                        <form class="catetgory__nav-form" action="">
+                            <span>Ordenar por</span>
+                            <label for="destacado"><input type="radio" id="destacado" name="destacado" value="0"> Destacados</label>
+                            <label for="recientet"><input type="radio" id="reciente" name="destacado" value="1"> Mas reciente</label>
+                            <label for="altobajo"><input type="radio" id="altobajo" name="destacado" value="2"> Precio: alto-bajo</label>
+                            <label for="bajoalto"><input type="radio" id="bajoalto" name="destacado" value="3"> Precio: bajo-alto</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Genero</span>
+                            <label for="hombre"><input type="checkbox" id="hombre" name="hombre" value="h"> Hombre</label>
+                            <label for="mujer"><input type="checkbox" id="mujer" name="mujer" value="m"> Mujer</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Comprar por precio</span>
+                            <label for="precio1"><input type="checkbox" id="precio1" name="menos" value="4"> Menos de $50</label>
+                            <label for="precio2"><input type="checkbox" id="precio2" name="inter57" value="5"> $50 - $70</label>
+                            <label for="precio3"><input type="checkbox" id="precio3" name="inter71" value="6"> $70 - $100</label>
+                            <label for="precio4"><input type="checkbox" id="precio4" name="mas" value="7"> Más de $100</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Deportes</span>
+                            <label for="estilo"><input type="checkbox" id="estilo" name="estilo" value="8"> Estilo de vida</label>
+                            <label for="running"><input type="checkbox" id="running" name="running" value="9">Running</label>
+                            <label for="futbol"><input type="checkbox" id="futbol" name="futbol" value="10"> Fútbol</label>
+                            <label for="gym"><input type="checkbox" id="gym" name="gym" value="11"> Entrenamieinto y Gym</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Marca</span>
+                            <label for="nikes"><input type="checkbox" id="nikes" name="nikes" value="12"> Nike Sportwaer</label>
+                            <label for="jordan"><input type="checkbox" id="jordan" name="jordan" value="13">Jordan</label>
+                            <label for="nikel"><input type="checkbox" id="nikel" name="nikel" value="14"> Nikelab</label>
+                            <label for="acg"><input type="checkbox" id="acg" name="acg" value="15"> Acg</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Colecciones</span>
+                            <label for="nikes"><input type="checkbox" id="nikes" name="nikes" value="16"> Air Force 1</label>
+                            <label for="jordan"><input type="checkbox" id="jordan" name="jordan" value="17"> Air Max</label>
+                            <label for="nikel"><input type="checkbox" id="nikel" name="nikel" value="18"> Blazer</label>
+                            <label for="acg"><input type="checkbox" id="acg" name="acg" value="19"> Brasilia</label>
+                        </form>
+                        <form class="catetgory__nav-form" action="">
+                            <span>Tipo de Cierre</span>
+                            <label for="nikes"><input type="checkbox" id="nikes" name="nikes" value="20"> Sin agujetas</label>
+                            <label for="jordan"><input type="checkbox" id="jordan" name="jordan" value="21"> Correa</label>
+                            <label for="nikel"><input type="checkbox" id="nikel" name="nikel" value="22"> Cordón elástico</label>
+                            <label for="acg"><input type="checkbox" id="acg" name="acg" value="23"> Botones</label>
+                        </form>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                    </div>
+
+                </nav>
+            </aside>
+    
+            <div class="main_main">
+                <div class="main__grid">
+
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln1.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$45,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln2.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Air Force 1'07</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln3.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low premium</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$54,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln4.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Air Force 1</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln5.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln6.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln7.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln8.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln9.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$45,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln10.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Air Force 1'07</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln11.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low premium</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$54,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln12.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Air Force 1</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln13.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln14.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln15.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln16.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln17.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$45,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln18.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Air Force 1'07</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln19.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low premium</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$54,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln20.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Air Force 1</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln21.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln22.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln23.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln24.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln25.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$45,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln26.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Air Force 1'07</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln27.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low premium</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$54,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln28.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Air Force 1</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$67,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln29.webp" loading="lazy" alt="calzado femenino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln30.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln31.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low SE</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$89,99</h6>
+                        </a>
+                    </div>
+                    <div class="main__grid-item">
+                        <a href="#" class="main_item-link">
+                            <img src="/Img/lonuevo/ln32.webp" loading="lazy" alt="calzado masculino">
+                            <h6>Nike Dunk Low Retro</h6>
+                            <h6>Calzado para mujer</h6>
+                            <h6>$34,99</h6>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        
+    </main>
+
+    <footer class="footer__container">
+        <div class="footer__wrapper">
+
+            <nav class="footer__social">
+                <ul class="footer__social-list">
+                    <li class="social-item-social"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li class="social-item-social"><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram fa-lg"></i></a></li>
+                    <li class="social-item-social"><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li class="social-item-social"><a href="https://x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter fa-lg" style="color: #141414;"></i></a></li>
+                </ul>
+            </nav>
+
+            <nav class="footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="social-item-menu"><a href="index.html">Home</a></li>
+                    <li class="social-item-menu"><a href="#">Blog</a></li>
+                    <li class="social-item-menu"><a href="#">Privacy</a></li>
+                    <li class="social-item-menu"><a href="contact.html">Contact</a></li>
+                    <li class="social-item-menu"><a href="#">Eventos</a></li>
+                </ul>
+            </nav>
+
+            <p> &copy;2021 Nadine Coelho | All Rights Reserved </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body, div, ul, nav, header, footer, a, li, label {
+  box-sizing: border-box;
+}
+
+/* logo Iniciio */
+.logo a {
+    position: absolute;
+}
+
+.signup__contatiner {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* imagen de fondo */
+.image__container {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("/Img/fondo_sign_up.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* DIV imagen de fondo final  */
+
+
+/* contenedor del fomulario de refistro  */
+.form__container {
+    /* background-image: linear-gradient(180deg, #fff , #ddd);  */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9;
+    /* align-items: center; */
+}
+
+/* DIV CLASS log_in // a:inicio sesion  */
+.log_in{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.log_in span {
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #817f82;
+}
+
+.log_in a {
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 40px;
+    color: #000;
+}
+
+.log_in a:hover {
+    background-color: #f7941d;
+    color: #f9f9f9;
+}
+
+/* DIV CLASS log_in final   */
+
+/* DIV CLASS h2 y h3 inicial   */
+.form__container h2 {
+    margin-left: 30px;
+    letter-spacing: 3px;
+    font-size: 40px;
+    margin-bottom: 0;
+    color: #141414;
+}
+
+.form__container h3 {
+    margin-left: 30px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: #817f82;
+    margin-top: 10px;
+}
+
+/* div hijo de form__container, contiene al fomulario */
+.form {
+    align-self: center;
+    /* border: 1px solid black; */
+    width: 70%;
+    max-width: 500px;   
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #0006;
+    padding: 20px;
+}
+
+.form label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #141414;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    border-color: #141414;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #0003;
+}
+
+.form input:focus {
+    outline: none;
+    border: 2px solid #f7941d;
+}
+
+.form input[type="submit"]{
+    width: 50%;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 4px #0003;
+}
+
+.form input[type="submit"]:focus{
+    opacity: 1;
+    
+}
+/* FIN div form__container*/
+
+/* DIV Redes Solciales */
+.redes {
+    margin: 20px 0 0 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes ul {
+    display:flex;
+    gap: 10px;
+    margin: auto;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.redes li {
+    list-style: none;
+}
+
+.redes a {
+    text-decoration: none;
+}
+
+.facabook {
+    border: 1px solid black;
+}
+
+/* Media Queries */
+@media screen and (max-width: 660px) {
+    .image__container {
+        display: none;
+    }
+    .form__container {
+        margin: auto;
+        min-height: 100vh;
+        background-image: url("/Img/fondo_sign_up.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .log_in {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .log_in span {
+        letter-spacing: normal;
+        color: #817f82;
+    }
+
+    .form__container h2, h3 {
+        align-self: center;
+        margin-top: 20px;
+    }    
+
+    .redes {
+        flex-direction: column;
+    }
+}
